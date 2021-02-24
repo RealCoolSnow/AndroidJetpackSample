@@ -7,14 +7,14 @@ import androidx.room.Query
 import kotlinx.coroutines.flow.Flow
 
 /**
- *  File: WordDAO
+ *  File: WordDao
  *  Author: CoolSnow(coolsnow2020@gmail.com)
  *  Created at: 2021/2/24 15:29
  *  Description:
  *
  */
 @Dao
-interface WordDAO {
+interface WordDao {
     @Query("SELECT * FROM word_table ORDER BY id DESC")
     fun getWordList(): Flow<List<Word>>
 

@@ -18,6 +18,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.NewWordActivity" />
+        <activity android:name=".activity.LiveDataActivity" />
     </application>
 
 </manifest>

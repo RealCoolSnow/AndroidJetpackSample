@@ -18,5 +18,5 @@ import kotlinx.coroutines.SupervisorJob
 class MyApplication : Application() {
     val applicationScope = CoroutineScope(SupervisorJob())
     val database by lazy { WordRoomDatabase.getDatabase(this, applicationScope) }
-    val repository by lazy { WordRepository(database.wordDAO()) }
+    val repository by lazy { WordRepository(database.wordDao()) }
 }

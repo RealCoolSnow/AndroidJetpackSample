@@ -17,7 +17,7 @@ import kotlinx.coroutines.launch
  */
 @Database(entities = arrayOf(Word::class), version = 1, exportSchema = false)
 public abstract class WordRoomDatabase : RoomDatabase() {
-    abstract fun wordDAO(): WordDAO
+    abstract fun wordDao(): WordDao
 
     private class WordDatabaseCallback(
         private val scope: CoroutineScope
@@ -27,7 +27,7 @@ public abstract class WordRoomDatabase : RoomDatabase() {
             super.onCreate(db)
             INSTANCE?.let { database ->
                 scope.launch {
-                    var wordDao = database.wordDAO()
+                    var wordDao = database.wordDao()
 
                     // Delete all content here.
                     wordDao.deleteAll()
@@ -37,7 +37,7 @@ public abstract class WordRoomDatabase : RoomDatabase() {
                     wordDao.insert(word)
                     word = Word(0, "World!")
                     wordDao.insert(word)
-                    
+
                 }
             }
         }

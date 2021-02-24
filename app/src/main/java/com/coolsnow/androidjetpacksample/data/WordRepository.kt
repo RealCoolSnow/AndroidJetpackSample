@@ -10,12 +10,12 @@ import kotlinx.coroutines.flow.Flow
  *  Description:
  *
  */
-class WordRepository(private val wordDAO: WordDAO) {
-    val allWords: Flow<List<Word>> = wordDAO.getWordList()
+class WordRepository(private val wordDao: WordDao) {
+    val allWords: Flow<List<Word>> = wordDao.getWordList()
 
     @Suppress("RedundantSuspendModifier")
     @WorkerThread
     suspend fun insert(word: Word) {
-        wordDAO.insert(word)
+        wordDao.insert(word)
     }
 }
