@@ -10,8 +10,8 @@ import javax.inject.Inject
  *
  */
 class User @Inject constructor() {
-    lateinit var name: String;
-    lateinit var age: Number;
+    var name: String = "";
+    var age: Number = 0;
 
     override fun toString(): String {
         return "name=$name,age=$age"

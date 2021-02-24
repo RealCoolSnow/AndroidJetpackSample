@@ -1,7 +1,11 @@
 package com.coolsnow.androidjetpacksample
 
 import android.app.Application
+import com.coolsnow.androidjetpacksample.data.WordRepository
+import com.coolsnow.androidjetpacksample.data.WordRoomDatabase
 import dagger.hilt.android.HiltAndroidApp
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.SupervisorJob
 
 /**
  *  File: MyApplication
@@ -11,4 +15,8 @@ import dagger.hilt.android.HiltAndroidApp
  *
  */
 @HiltAndroidApp
-class MyApplication : Application()
+class MyApplication : Application() {
+    val applicationScope = CoroutineScope(SupervisorJob())
+    val database by lazy { WordRoomDatabase.getDatabase(this, applicationScope) }
+    val repository by lazy { WordRepository(database.wordDAO()) }
+}
