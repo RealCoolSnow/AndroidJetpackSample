@@ -5,11 +5,11 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.viewModels
-import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.coolsnow.androidjetpacksample.MyApplication
 import com.coolsnow.androidjetpacksample.R
+import com.coolsnow.androidjetpacksample.activity.base.BaseActivity
 import com.coolsnow.androidjetpacksample.adapter.WordListAdapter
 import com.coolsnow.androidjetpacksample.data.Word
 import com.coolsnow.androidjetpacksample.viewmodels.WordViewModel
@@ -25,7 +25,7 @@ import kotlinx.android.synthetic.main.activity_live_data.*
  *
  */
 @AndroidEntryPoint
-class LiveDataActivity : AppCompatActivity() {
+class LiveDataActivity : BaseActivity() {
     private val newWordActivityRequestCode = 1
     private val wordViewModel: WordViewModel by viewModels {
         WordViewModelFactory((application as MyApplication).repository)

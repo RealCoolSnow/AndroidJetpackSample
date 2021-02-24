@@ -4,8 +4,8 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
-import androidx.appcompat.app.AppCompatActivity
 import com.coolsnow.androidjetpacksample.R
+import com.coolsnow.androidjetpacksample.activity.base.BaseActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_new_word.*
 
@@ -17,7 +17,7 @@ import kotlinx.android.synthetic.main.activity_new_word.*
  *
  */
 @AndroidEntryPoint
-class NewWordActivity : AppCompatActivity() {
+class NewWordActivity : BaseActivity() {
 
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

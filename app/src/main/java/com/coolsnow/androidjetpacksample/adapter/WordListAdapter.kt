@@ -18,6 +18,15 @@ import com.coolsnow.androidjetpacksample.data.Word
  *
  */
 class WordListAdapter : ListAdapter<Word, WordListAdapter.WordViewHolder>(WordComparator()) {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WordViewHolder {
+        return WordViewHolder.create(parent)
+    }
+
+    override fun onBindViewHolder(holder: WordViewHolder, position: Int) {
+        val current = getItem(position)
+        holder.bind(current.word)
+    }
+
     class WordViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val wordItemView: TextView = itemView.findViewById(R.id.textView)
         fun bind(text: String?) {
@@ -27,29 +36,20 @@ class WordListAdapter : ListAdapter<Word, WordListAdapter.WordViewHolder>(WordCo
         companion object {
             fun create(parent: ViewGroup): WordViewHolder {
                 val view: View = LayoutInflater.from(parent.context)
-                    .inflate(R.layout.recyclerview_item, parent, false)
+                    .inflate(R.layout.item_word, parent, false)
                 return WordViewHolder(view)
             }
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WordViewHolder {
-        return WordViewHolder.create(parent)
-    }
+    class WordComparator : DiffUtil.ItemCallback<Word>() {
+        override fun areItemsTheSame(oldItem: Word, newItem: Word): Boolean {
+            return oldItem == newItem
+        }
 
-    override fun onBindViewHolder(holder: WordViewHolder, position: Int) {
-        val current = getItem(position)
-        holder.bind(current.word)
-    }
-}
+        override fun areContentsTheSame(oldItem: Word, newItem: Word): Boolean {
+            return oldItem.word == newItem.word
+        }
 
-class WordComparator : DiffUtil.ItemCallback<Word>() {
-    override fun areItemsTheSame(oldItem: Word, newItem: Word): Boolean {
-        return oldItem == newItem
     }
-
-    override fun areContentsTheSame(oldItem: Word, newItem: Word): Boolean {
-        return oldItem.word == newItem.word
-    }
-
 }
