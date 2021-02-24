@@ -1,8 +1,8 @@
-package com.coolsnow.androidjetpacksample.viewmodels
+package com.coolsnow.androidjetpacksample.livedata.viewmodels
 
 import androidx.lifecycle.*
-import com.coolsnow.androidjetpacksample.data.Word
-import com.coolsnow.androidjetpacksample.data.WordRepository
+import com.coolsnow.androidjetpacksample.livedata.data.Word
+import com.coolsnow.androidjetpacksample.livedata.data.WordRepository
 import kotlinx.coroutines.launch
 
 /**

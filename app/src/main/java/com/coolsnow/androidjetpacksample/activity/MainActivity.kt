@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.coolsnow.androidjetpacksample.R
 import com.coolsnow.androidjetpacksample.activity.base.BaseActivity
+import com.coolsnow.androidjetpacksample.livedata.activity.LiveDataActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_live_data.*
 

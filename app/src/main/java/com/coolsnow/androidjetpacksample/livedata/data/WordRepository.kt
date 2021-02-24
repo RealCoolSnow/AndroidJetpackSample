@@ -1,6 +1,8 @@
-package com.coolsnow.androidjetpacksample.data
+package com.coolsnow.androidjetpacksample.livedata.data
 
 import androidx.annotation.WorkerThread
+import com.coolsnow.androidjetpacksample.livedata.data.Word
+import com.coolsnow.androidjetpacksample.livedata.data.WordDao
 import kotlinx.coroutines.flow.Flow
 
 /**

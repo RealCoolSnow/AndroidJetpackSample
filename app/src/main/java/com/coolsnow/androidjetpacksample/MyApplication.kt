@@ -1,8 +1,8 @@
 package com.coolsnow.androidjetpacksample
 
 import android.app.Application
-import com.coolsnow.androidjetpacksample.data.WordRepository
-import com.coolsnow.androidjetpacksample.data.WordRoomDatabase
+import com.coolsnow.androidjetpacksample.livedata.data.WordRepository
+import com.coolsnow.androidjetpacksample.livedata.data.WordRoomDatabase
 import dagger.hilt.android.HiltAndroidApp
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.SupervisorJob

@@ -1,4 +1,4 @@
-package com.coolsnow.androidjetpacksample.adapter
+package com.coolsnow.androidjetpacksample.livedata.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.coolsnow.androidjetpacksample.R
-import com.coolsnow.androidjetpacksample.data.Word
+import com.coolsnow.androidjetpacksample.livedata.data.Word
 
 /**
  *  File: WordListAdapter

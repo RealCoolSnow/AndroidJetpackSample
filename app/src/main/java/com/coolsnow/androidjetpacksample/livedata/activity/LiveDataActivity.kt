@@ -1,4 +1,4 @@
-package com.coolsnow.androidjetpacksample.activity
+package com.coolsnow.androidjetpacksample.livedata.activity
 
 import android.app.Activity
 import android.content.Intent
@@ -10,10 +10,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.coolsnow.androidjetpacksample.MyApplication
 import com.coolsnow.androidjetpacksample.R
 import com.coolsnow.androidjetpacksample.activity.base.BaseActivity
-import com.coolsnow.androidjetpacksample.adapter.WordListAdapter
-import com.coolsnow.androidjetpacksample.data.Word
-import com.coolsnow.androidjetpacksample.viewmodels.WordViewModel
-import com.coolsnow.androidjetpacksample.viewmodels.WordViewModelFactory
+import com.coolsnow.androidjetpacksample.livedata.adapter.WordListAdapter
+import com.coolsnow.androidjetpacksample.livedata.data.Word
+import com.coolsnow.androidjetpacksample.livedata.viewmodels.WordViewModel
+import com.coolsnow.androidjetpacksample.livedata.viewmodels.WordViewModelFactory
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_live_data.*
 

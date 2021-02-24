@@ -17,8 +17,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.NewWordActivity" />
-        <activity android:name=".activity.LiveDataActivity" />
+        <activity android:name=".livedata.activity.NewWordActivity" />
+        <activity android:name=".livedata.activity.LiveDataActivity" />
     </application>
 
 </manifest>

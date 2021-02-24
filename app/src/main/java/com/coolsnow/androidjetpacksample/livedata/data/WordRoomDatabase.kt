@@ -1,4 +1,4 @@
-package com.coolsnow.androidjetpacksample.data
+package com.coolsnow.androidjetpacksample.livedata.data
 
 import android.content.Context
 import androidx.room.Database

@@ -1,4 +1,4 @@
-package com.coolsnow.androidjetpacksample.activity
+package com.coolsnow.androidjetpacksample.livedata.activity
 
 import android.app.Activity
 import android.content.Intent
