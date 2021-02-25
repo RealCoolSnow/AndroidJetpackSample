@@ -30,7 +30,7 @@ class UploadWorker(appContext: Context, workerParams: WorkerParameters) :
         NotificationUtil.show(
             applicationContext,
             applicationContext.getString(R.string.work_manager),
-            applicationContext.getString(R.string.work_will_executed_tip)
+            applicationContext.getString(R.string.work_executed_tip)
         )
     }
 }
