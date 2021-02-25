@@ -1,4 +1,4 @@
-package com.coolsnow.androidjetpacksample.livedata.activity
+package com.coolsnow.androidjetpacksample.livedata
 
 import android.app.Activity
 import android.content.Intent
@@ -34,6 +34,7 @@ class LiveDataActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_live_data)
+        supportActionBar?.title = getString(R.string.live_data)
         val adapter = WordListAdapter()
         recyclerview.adapter = adapter
         recyclerview.layoutManager = LinearLayoutManager(this)

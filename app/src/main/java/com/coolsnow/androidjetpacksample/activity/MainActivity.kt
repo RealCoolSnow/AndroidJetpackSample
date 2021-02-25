@@ -12,15 +12,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.coolsnow.androidjetpacksample.R
 import com.coolsnow.androidjetpacksample.activity.base.BaseActivity
-import com.coolsnow.androidjetpacksample.livedata.activity.LiveDataActivity
+import com.coolsnow.androidjetpacksample.livedata.LiveDataActivity
+import com.coolsnow.androidjetpacksample.workmanager.WorkManagerActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_live_data.*
 
 @AndroidEntryPoint
 class MainActivity : BaseActivity() {
-    private val sampleList: List<SampleItem> = arrayListOf(
-        SampleItem("Live Data", LiveDataActivity::class.java.name)
-    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,6 +28,10 @@ class MainActivity : BaseActivity() {
             DividerItemDecoration(
                 this, LinearLayoutManager.VERTICAL
             )
+        )
+        val sampleList: List<SampleItem> = arrayListOf(
+            SampleItem(getString(R.string.live_data), LiveDataActivity::class.java.name),
+            SampleItem(getString(R.string.work_manager), WorkManagerActivity::class.java.name)
         )
         recyclerview.adapter = SampleListAdapter(this, sampleList)
     }

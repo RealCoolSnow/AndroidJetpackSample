@@ -4,4 +4,8 @@
     <string name="button_save">Save</string>
     <string name="empty_not_saved">Word not saved because it is empty.</string>
     <string name="add_word">Add word</string>
+    <string name="live_data">Live Data</string>
+    <string name="work_manager">Work Manager</string>
+    <string name="work_will_executed_tip">The work will be executed in 5 seconds</string>
+    <string name="work_executed_tip">Work executed!!!</string>
 </resources>

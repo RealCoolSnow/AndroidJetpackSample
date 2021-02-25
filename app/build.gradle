@@ -54,4 +54,6 @@ dependencies {
     androidTestImplementation "androidx.room:room-testing:$rootProject.roomVersion"
     //hilt
     implementation "com.google.dagger:hilt-android:$rootProject.hiltVersion"
+    //WorkManager
+    implementation "androidx.work:work-runtime-ktx:$rootProject.workVersion"
 }

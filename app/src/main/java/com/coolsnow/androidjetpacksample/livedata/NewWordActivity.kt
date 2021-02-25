@@ -1,4 +1,4 @@
-package com.coolsnow.androidjetpacksample.livedata.activity
+package com.coolsnow.androidjetpacksample.livedata
 
 import android.app.Activity
 import android.content.Intent
@@ -22,6 +22,7 @@ class NewWordActivity : BaseActivity() {
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new_word)
+        supportActionBar?.title = getString(R.string.add_word)
         button_save.setOnClickListener {
             val replyIntent = Intent()
             if (TextUtils.isEmpty(edit_word.text)) {
