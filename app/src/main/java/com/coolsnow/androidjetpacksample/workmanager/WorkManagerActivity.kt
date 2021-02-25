@@ -1,10 +1,10 @@
 package com.coolsnow.androidjetpacksample.workmanager
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
 import androidx.work.WorkRequest
-import com.coolsnow.androidjetpacksample.NotificationUtil
 import com.coolsnow.androidjetpacksample.R
 import com.coolsnow.androidjetpacksample.activity.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_work_manager.*
@@ -35,10 +35,6 @@ class WorkManagerActivity : BaseActivity() {
         WorkManager
             .getInstance(this)
             .enqueue(uploadWorkRequest)
-        NotificationUtil.show(
-            this,
-            getString(R.string.work_manager),
-            getString(R.string.work_will_executed_tip)
-        )
+        Toast.makeText(this, R.string.work_will_executed_tip, Toast.LENGTH_SHORT).show()
     }
 }

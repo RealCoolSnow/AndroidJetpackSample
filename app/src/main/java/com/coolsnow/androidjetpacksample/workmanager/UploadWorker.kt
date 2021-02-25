@@ -2,9 +2,9 @@ package com.coolsnow.androidjetpacksample.workmanager
 
 import android.content.Context
 import android.util.Log
-import android.widget.Toast
 import androidx.work.Worker
 import androidx.work.WorkerParameters
+import com.coolsnow.androidjetpacksample.NotificationUtil
 import com.coolsnow.androidjetpacksample.R
 
 /**
@@ -27,6 +27,10 @@ class UploadWorker(appContext: Context, workerParams: WorkerParameters) :
 
     private fun uploadLog() {
         Log.i(TAG, "uploadLog call")
-        Toast.makeText(applicationContext, R.string.work_executed_tip, Toast.LENGTH_SHORT).show()
+        NotificationUtil.show(
+            applicationContext,
+            applicationContext.getString(R.string.work_manager),
+            applicationContext.getString(R.string.work_will_executed_tip)
+        )
     }
 }
